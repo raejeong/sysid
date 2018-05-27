@@ -1,3 +1,12 @@
 Tue May 22 15:12:26 2018
 ERROR: Could not open activation key file mjkey.txt
 
+Sat May 26 21:09:58 2018
+WARNING: Unknown warning type Time = 17.8080.
+
+Sat May 26 21:11:03 2018
+WARNING: Unknown warning type Time = 4.4440.
+
+Sat May 26 21:35:52 2018
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 2.0900.
+

@@ -9,11 +9,17 @@
 	<worldbody>
 		<light pos="0 1 1" dir="0 -1 -1" diffuse="1 1 1"/>
 		<body>
-			<geom type="capsule" fromto="0 0 0  0 0 1" size=".05"/>
-			<joint type="hinge" name="s_link" pos="0 0 0" axis="0 1 0" damping="5"/>
+			<geom type="capsule" fromto="0 0 0  0 0 0.5" size=".05"/>
+			<joint type="hinge" name="s_link1" pos="0 0 0" axis="0 1 0" damping="1"/>
+			<body>
+				<geom type="capsule" fromto="0 0 0.5  0 0 1.0" size=".05"/>
+				<joint type="hinge" name="s_link2" pos="0 0 0.5" axis="0 1 0" damping="5"/>
+			</body>
 		</body>
 	</worldbody>
 	<actuator>	
-		<position joint='s_link' name='As_link' kp="50"/>
+		<motor joint='s_link2' name='As_link1' gear="1"/>
+		<!-- <position joint='s_link' name='As_link' kp="10"/> -->
+		<!-- <velocity joint='s_link' name='As_link' kv="100"/> -->
 	</actuator>
 </mujoco>
